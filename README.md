@@ -6,14 +6,14 @@ swap
 
 ```sh
 # Download the script that does the heavy lifting
-wget -O /usr/local/sbin/azure_temporary_swap.py https://raw.githubusercontent.com/bjorkegeek/azure_temporary_swap/main/azure_temporary_swap.py
+sudo curl -o /usr/local/sbin/azure_temporary_swap.py https://raw.githubusercontent.com/bjorkegeek/azure_temporary_swap/main/azure_temporary_swap.py
 
 # Download systemd service file
-wget -O /etc/systemd/system/azure_temporary_swap.service https://raw.githubusercontent.com/bjorkegeek/azure_temporary_swap/main/azure_temporary_swap.service
+sudo curl -o /etc/systemd/system/azure_temporary_swap.service https://raw.githubusercontent.com/bjorkegeek/azure_temporary_swap/main/azure_temporary_swap.service
 
 # Get the service running
-systemctl daemon-reload
-systemctl enable --now azure_temporary_swap.py
+sudo systemctl daemon-reload
+sudo systemctl enable --now azure_temporary_swap
 ```
 
 ## How It Works

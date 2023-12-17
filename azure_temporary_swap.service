@@ -1,0 +1,12 @@
+[Unit]
+Description=Convert NTFS Temporary Disks to Linux Swap
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python /usr/local/sbin/azure_temporary_swap.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
